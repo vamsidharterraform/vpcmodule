@@ -1,15 +1,3 @@
-locals {
-  common_tags = {
-    Environment = "dev"
-    Project     = var.cluster_name
-    ManagedBy   = "Terraform"
-    Terraform   = "true"
-
-    "kubernetes.io/cluster/${var.cluster_name}" = "shared"
-    "karpenter.sh/discovery"                    = var.cluster_name
-  }
-}
-
 resource "aws_vpc" "main" {
   cidr_block           = var.vpc_cidr
   enable_dns_hostnames = true
