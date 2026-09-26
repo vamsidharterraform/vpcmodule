@@ -23,7 +23,7 @@ variable "cluster_name" {
   type        = string
 }
 
-variable "environemnt" {
+variable "environment" {
   description = "value of the environment"
   type        = string
 }
